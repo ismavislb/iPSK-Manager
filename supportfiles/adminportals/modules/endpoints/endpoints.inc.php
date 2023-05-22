@@ -34,7 +34,7 @@
 	if($associationList){
 		if($associationList['count'] > 0){
 
-			$pageData['endpointAssociationList'] .= '<table id="endpoint-table" class="table table-hover"><thead><tr><th scope="col">MAC Address</th><th scope="col">iPSK Endpoint Grouping</th><th scope="col">Expiration Date</th><th style="display:none;">Full Name</th><th style="display:none;">Email</th><th style="display:none;">Description</th><th scope="col">View</th><th scope="col">Actions</th></tr></thead><tbody>';
+			$pageData['endpointAssociationList'] .= '<table id="endpoint-table" class="table table-hover"><thead><tr><th scope="col">MAC Address</th><th scope="col">iPSK Endpoint Grouping</th><th scope="col">Expiration Date</th><th style="display:none;">Full Name</th><th scope="col">Email</th><th scope="col">Description</th><th scope="col">View</th><th scope="col">Actions</th></tr></thead><tbody>';
 			
 			for($idxId = $pageStart; $idxId < $pageEnd; $idxId++) {
 							
@@ -60,8 +60,8 @@
 				$pageData['endpointAssociationList'] .= '<td>'.$associationList[$idxId]['groupName'].'</td>';
 				$pageData['endpointAssociationList'] .= '<td>'.$expiration.'</td>';
 				$pageData['endpointAssociationList'] .= '<td style="display:none;">'.$associationList[$idxId]['fullName'].'</td>';
-				$pageData['endpointAssociationList'] .= '<td style="display:none;">'.$associationList[$idxId]['email'].'</td>';
-				$pageData['endpointAssociationList'] .= '<td style="display:none;">'.$associationList[$idxId]['description'].'</td>';
+				$pageData['endpointAssociationList'] .= '<td>'.$associationList[$idxId]['email'].'</td>';
+				$pageData['endpointAssociationList'] .= '<td>'.$associationList[$idxId]['description'].'</td>';
 				$pageData['endpointAssociationList'] .= '<td><a class="epg-tableicons" module="endpoints" sub-module="view" row-id="'.$associationList[$idxId]['id'].'" href="#"><span data-feather="zoom-in"></span></a></td>';
 
 				
